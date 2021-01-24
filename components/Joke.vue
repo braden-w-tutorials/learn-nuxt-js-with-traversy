@@ -3,7 +3,7 @@
     <p>{{ joke }}</p>
 
     <nuxt-link :to="'/jokes/' + id">
-      <button>Click Me for ID</button>
+      <v-btn>Click Me for ID</v-btn>
     </nuxt-link>
   </div>
 </template>
