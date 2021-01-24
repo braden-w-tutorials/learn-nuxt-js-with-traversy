@@ -11,8 +11,10 @@
 </template>
 <script>
 import axios from 'axios'
+import Joke from '@/components/Joke'
 
 export default {
+  components: { Joke },
   data() {
     return {
       jokes: [],
@@ -37,12 +39,11 @@ export default {
 
     try {
       const res = await axios.get('https://icanhazdadjoke.com/search', config)
-      console.log(res.data)
+      this.jokes = res.data
     } catch (err) {
       console.error(err)
     }
   },
-  created() {},
 }
 </script>
 
