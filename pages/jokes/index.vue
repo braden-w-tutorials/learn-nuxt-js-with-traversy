@@ -1,6 +1,12 @@
 <template>
   <div>
     <h2>Jokes List</h2>
+    <Joke
+      v-for="joke in jokes"
+      :id="joke.id"
+      :key="joke.id"
+      :joke="joke.joke"
+    />
   </div>
 </template>
 <script>
