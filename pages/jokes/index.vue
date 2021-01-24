@@ -5,6 +5,11 @@
 </template>
 <script>
 export default {
+  data() {
+    return {
+      jokes: [],
+    }
+  },
   head() {
     return {
       title: 'Jokes',
@@ -17,6 +22,7 @@ export default {
       ],
     }
   },
+  created() {},
 }
 </script>
 
