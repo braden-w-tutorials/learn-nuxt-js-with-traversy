@@ -15,6 +15,18 @@ export default {
       joke: {},
     }
   },
+  head() {
+    return {
+      title: this.joke,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Best place for corny dad jokes',
+        },
+      ],
+    }
+  },
   async created() {
     const config = {
       headers: {
