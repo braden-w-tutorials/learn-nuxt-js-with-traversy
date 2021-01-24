@@ -8,7 +8,25 @@
 </template>
 
 <script>
-export default {}
+import axios from 'axios'
+  async created() {
+    const config = {
+      headers: {
+        Accept: 'application/json',
+      },
+    }
+    try {
+      const res = await axios.get(
+        `https://icanhazdadjoke.com/j/${this.$route.params.id}`,
+        config
+      )
+      this.joke = res.data.joke
+      console.log(this.joke)
+    } catch (err) {
+      console.error(err)
+    }
+  },
+}
 </script>
 
 <style></style>
